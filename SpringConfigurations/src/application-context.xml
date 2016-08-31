@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean name="carEngine" class="com.shikher.xml.CarEngine"></bean>
+    <bean name="headLight" class="com.shikher.xml.HeadLight"></bean>
+
+
+    <bean name="car" class="com.shikher.xml.Car">
+        <constructor-arg ref="carEngine"/>
+        <property name="headLight" ref="headLight"></property>
+    </bean>
+
+
+</beans>
